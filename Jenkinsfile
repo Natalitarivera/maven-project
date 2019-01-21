@@ -34,7 +34,7 @@ stages{
                 stage ('Deploy to Production'){
                     steps {
                         //withCredentials([sshUserPrivateKey(credentialsId: '8b29bd13-89ea-4395-86f4-d92c14930af5', keyFileVariable: 'a.pem', passphraseVariable: '', usernameVariable: '')]) {
-                        sh "scp -i /home/nisum/Desktop/dev/tomcat-demo.pem -o StrictHostKeyChecking=no **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        sh "scp -i /home/nisum/Desktop/dev/tomcat-demo.pem -o StrictHostKeyChecking=no **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
