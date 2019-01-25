@@ -4,4 +4,4 @@ ADD ./webapp/target/*.war /usr/local/tomcat/webapp
 
 EXPOSE 8080 
 
-CMD [ "catalia.sh", "run" ]
+CMD [ "bin/catalia.sh", "run" ]
